@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Musik -->
+  <audio id="bgMusic" loop>
+    <source src="music/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Background malam -->
+  <div class="sky">
+    <div class="stars"></div>
+    <div class="clouds"></div>
+  </div>
+
+  <header class="hero fade-in">
+    <h1>Hai, Raniiii </h1>
+    <p>Website kecil ini aku buat cuma buat kamu —  
+      biar kamu inget kalau kamu masih punya seseorang yang selalu dengerin kamu</p>
+
+    <button id="playMusic">🎵 Putar Musik</button>
+  </header>
+
+  <main>
+    <section class="story fade-in">
+      <div class="text">
+        <h2>Selamat Ulang Tahun yaaa </h2>
+        <p>Kamu itu hebat, tau gak? Kadang capek, tapi masih bisa senyum.  
+           Kadang rapuh, tapi tetap berdiri. Aku bangga banget sama kamu.</p>
+      </div>
+      <div class="photo floating"><img src="images/foto1.jpg"></div>
+    </section>
+
+    <section class="story reverse fade-in">
+      <div class="photo floating"><img src="images/foto2.jpg"></div>
+      <div class="text">
+        <h2>Kenangan Kita </h2>
+        <p>Kita udah lewatin banyak hal.  
+           Semua itu gak akan pernah aku lupain </p>
+      </div>
+    </section>
+
+    <section class="story fade-in">
+      <div class="text">
+        <h2>Terima Kasih </h2>
+        <p>Makasih udah ada di tiap cerita,  
+           makasih udah tetap baik, walau dunia gak selalu begitu.  
+           Kamu cahaya kecil yang selalu nyala </p>
+      </div>
+      <div class="photo floating"><img src="images/foto3.jpg"></div>
+    </section>
+
+    <section class="story reverse fade-in">
+      <div class="photo floating"><img src="images/foto4.jpg"></div>
+      <div class="text">
+        <h2>Untuk Hari Esok </h2>
+        <p>Jangan pernah takut gagal, ya.  
+           Gagal itu bukan akhir, tapi cara hidup bilang “ayo coba lagi”.  
+           Aku bakal terus dukung kamu </p>
+      </div>
+    </section>
+
+    <section class="story fade-in">
+      <div class="text">
+        <h2>Kamu Gak Sendiri </h2>
+        <p>Kalau kamu ngerasa capek, istirahat dulu gak apa-apa.  
+           Aku tetap di sini, nunggu kamu kuat lagi </p>
+      </div>
+      <div class="photo floating"><img src="images/foto5.jpg"></div>
+    </section>
+
+    <section class="story reverse fade-in">
+      <div class="photo floating"><img src="images/foto6.jpg"></div>
+      <div class="text">
+        <h2>Semoga Kita Akan Terus Jadi Teman</h2>
+        <p>Waktu boleh ganti segalanya, tapi pertemanan kita enggak.  
+           Aku akan tetap di sini, sekarang, dan seterusnya </p>
+      </div>
+    </section>
+
+    <section class="story fade-in">
+      <div class="text">
+        <h2>Sampai Kapanpun </h2>
+        <p>Aku gak akan kemana-mana.  
+           Kamu punya aku — teman yang akan selalu percaya sama kamu.</p>
+      </div>
+      <div class="photo floating"><img src="images/foto7.jpg"></div>
+    </section>
+
+   <section class="motivation-section fade-in">
+  <h2>Pesan dari seekor teman </h2>
+  <div class="btn-group">
+    <button class="motivationBtn">Bisikan Angin</button>
+    <button class="motivationBtn">pesan dari hujan</button>
+    <button class="motivationBtn">Pesan Rahasia dari Langit</button>
+  </div>
+</section>
+
+
+        <!-- Surat Rahasia -->
+    <section class="secret-letter fade-in">
+      <h2>Surat Rahasia</h2>
+      <p>Ada sesuatu yang cuma bisa kamu buka... tapi kamu harus pecahkan teka-tekinya dulu </p>
+      <button id="openEnvelope">Buka </button>
+    </section>
+
+    <section class="closing fade-in">
+      <h2>Dari Aku, Teman paling peka (eaaaa) </h2>
+      <p>Yang cuma pengen kamu tetap senyum, tetap kuat, dan tetap jadi kamu yang hangat.  
+         tanpa harus peduliin mereka ngomongin kamu </p>
+      <p class="small">Btw lagu ini buat nemenin kamu — lagu spesial yang aku pilihkan.</p>
+      <p>Aku nentuin lagunya butuh waktu beberapa hari, akhirnya aku nemu lagu ini</p>
+    </section>
+  </main>
+
+  <!-- Popup motivasi -->
+  <div id="popup" class="hidden">
+    <div class="popup-content">
+      <p id="motivationText"></p>
+      <button id="closePopup">Tutup</button>
+    </div>
+  </div>
+
+    <!-- Popup Teka-Teki -->
+  <div id="riddlePopup" class="hidden">
+    <div class="popup-content">
+      <h3>Teka-Teki:</h3>
+      <p id="riddleText">Julukan buat kita yang temenen sembunyi sembunyi wkwkwk</p>
+      <input type="text" id="riddleAnswer" placeholder="Ketik jawabanmu...">
+      <button id="submitRiddle">Kirim</button>
+      <p id="riddleFeedback"></p>
+    </div>
+  </div>
+
+<div id="letterPopup" class="hidden">
+  <div class="popup-content">
+    <h3>Surat Rahasia </h3>
+
+    <!-- Slide Container -->
+    <div id="letterSlides" class="letter-slide-container">
+      <div class="letter-slide active">
+        <p>
+         anjaayyyy kebuka bahhh wkwkwk.
+        Selamat ulang tahun yahh, maaf aku belum bisa ngasih banyak hal.
+        makasih udah mau temenan sama aku.
+        <p> Tau ga?, dulunya ada planet yang dianggap sebagai planet kesembilan di tata surya kita
+        tapi sekarang hanya karna planet itu ga memenuhi syarat sebagat "planet" 
+        jadinya planet itu udah ga di anggap lagi. Namanya planet pluto.
+        aneh sihhh tiba-tiba bahas planet wkwkwk
+        tapi walaupun pluto udah ga dianggap sebagai planet lagi, dia tetep bertputar di porosnya
+        meski dia sudah dilupakan dia tak pernah meninggalkan tata surya kita
+      </p>
+        </p>
+      </div>
+
+      <div class="letter-slide">
+        <p>
+          Ini bukan hanya sekedar berbicara tentang pluto
+          tapi ini berbicara tentang kita. 
+          kalau suatu saat kita milih jalan kita masing-masing, aku mau kamu tau kalau aku bakal selalu ada.
+          Dimana aku sebagai pluto dan kamu mataharinya, aku bakal tetap berputar di sekitarmu meskipun
+          aku tak dianggap oleh orang lain, atau bahkan sudah dilupakan 
+        <p>Aku bukan orang yang pintar berkata-kata, aku bahas pluto bukan karena ada apa apa.
+          tapi aku kadang suka baca artikel random, dan aku ngebaca tentang pluto, planet kecil yang terasingkan wkwk...
+        </p>  
+        </p>
+      </div>
+    </div>
+
+    <div class="slide-buttons">
+      <button id="prevSlide">Back</button>
+      <button id="nextSlide">Next</button>
+    </div>
+
+    <button id="closeLetter">Tutup Surat</button>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
